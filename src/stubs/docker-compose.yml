@@ -1,0 +1,38 @@
+web:
+  image: steveazz/nginx
+  ports:
+    - "127.0.0.1:8080:80"
+  volumes:
+    - ./:/var/www
+    - ./docker-config/vhost.conf:/etc/nginx/sites-enabled/vhost.conf
+  links:
+    - php
+
+db:
+  image: sameersbn/mysql
+  volumes:
+   - /var/lib/mysql
+  environment:
+   - DB_NAME=laravel
+   - DB_USER=steve
+   - DB_PASS=password
+
+php:
+  image: nmcteam/php56
+  volumes:
+    - ./docker-config/php-fpm.conf:/etc/php5/fpm/php-fpm.conf
+    - ./:/var/www
+  links:
+    - db
+
+laravel-commands:
+  image: steveazz/laravel-commands
+  volumes:
+    - ./:/var/www
+  links:
+    - db
+
+gulp:
+  image: steveazz/gulp
+  volumes:
+    - ./:/var/www

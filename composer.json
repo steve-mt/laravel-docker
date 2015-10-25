@@ -1,0 +1,25 @@
+{
+    "name": "steveazz/laravel-docker",
+    "description": "Docker Containers for simple Laravel development.",
+    "keywords": ["laravel","docker", "laravel docker"],
+    "require": {
+        "php": ">=5.4",
+        "symfony/console": "~2.0",
+        "symfony/process": "~2.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Steve Azzopardi",
+            "email": "steveazz@outlook.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "SteveAzz\\Docker\\": "src/"
+        }
+    },
+    "bin": [
+        "laravel-docker"
+    ]
+}
