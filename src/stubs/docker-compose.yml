@@ -14,8 +14,8 @@ db:
    - /var/lib/mysql
   environment:
    - DB_NAME=laravel
-   - DB_USER=steve
-   - DB_PASS=password
+   - DB_USER=laravel
+   - DB_PASS=laravel
 
 php:
   image: nmcteam/php56
