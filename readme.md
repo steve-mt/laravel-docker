@@ -47,4 +47,8 @@ You should see the default installation Laravel welcome page.
     $ composer dump-autoload
     ```
 
+# More Information
+You can find more information on how to use the docker containers in the wiki [here](https://github.com/SteveAzz/laravel-docker/wiki)
+***
+
 If you encounter any problem please do not hesitate to open up an issue I'll do my best to help.
